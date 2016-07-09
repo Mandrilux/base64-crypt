@@ -1,13 +1,3 @@
-/*
-** display.c for  in /home/baptiste/project/base64-crypt
-**
-** Made by
-** Login   <baptiste@epitech.net>
-**
-** Started on  Sat Jul  9 21:26:19 2016
-** Last update Sat Jul  9 21:38:34 2016 
-*/
-
 #include "data.h"
 
 int	display_code(int *tab, int len)

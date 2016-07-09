@@ -1,14 +1,3 @@
-
-/*
-1;2802;0c** main.c for  in /home/baptiste/project/base64-crypt
-**
-** Made by
-** Login   <baptiste@epitech.net>
-**
-** Started on  Sat Jul  9 15:26:23 2016
-** Last update Sat Jul  9 21:39:12 2016 
-*/
-
 #include "data.h"
 
 int	main(int ac, char **argv)
