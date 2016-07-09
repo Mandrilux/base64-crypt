@@ -4,6 +4,7 @@
 
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 
 		/* error.c */
 
@@ -12,6 +13,6 @@ int		 return_error(char *error, int flag);
 		/* main.c */
 
 int		 main(int ac, char **argv);
-int		 preparator(char *str);
+int		 str_to_bin(char *str);
 
 #endif /* DATA_H_ */
