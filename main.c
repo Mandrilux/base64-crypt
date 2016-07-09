@@ -5,7 +5,7 @@
 ** Login   <baptiste@epitech.net>
 **
 ** Started on  Sat Jul  9 15:26:23 2016
-** Last update Sat Jul  9 15:42:45 2016 
+** Last update Sat Jul  9 15:49:39 2016 
 */
 
 #include "data.h"
@@ -21,17 +21,21 @@ int	main(int ac, char **argv)
 
 int	preparator(char *str)
 {
-  int	i = 8;
-
-  printf("valeur de %c = %d\n",  str[0], str[0]);
-  while (i > 0)
+  int	i = 7;
+  int	k = -1;
+  while (str[++k] != '\0')
     {
-      if (((str[0] >> i) & 1) == 1)
-	printf("valeur de i = %d et [1]", i);
-      else
-	printf("valeur de i = %d et [0]", i);
-      i--;
-      printf("\n");
+      while (i >= 0)
+	{
+	  if (((str[k] >> i) & 1) == 1)
+	    printf("1");
+	  else
+	    printf("0");
+	  i--;
+	}
+      printf(" ");
+      i = 7;
     }
+  printf("\n");
   return (1);
 }
