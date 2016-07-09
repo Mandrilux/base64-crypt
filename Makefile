@@ -1,7 +1,8 @@
 NAME	=	base64
 
 SRC	=	main.c \
-		error.c
+		error.c \
+		display.c
 
 INC_DIR	=	include
 
@@ -9,9 +10,10 @@ OBJ	=	$(SRC:.c=.o)
 
 CC	=	/usr/bin/gcc
 
-CFLAGS	=	-W -Wall -Wextra -ansi -pedantic -O3 -g
+CFLAGS	=	-W -Wall -Wextra -ansi -pedantic -O3 -g -std=gnu99
 
-CFLAGS  +=      -I$(INC_DIR)
+
+CFLAGS  +=      -I$(INC_DIR) -lm
 
 RM	=	rm -f
 ECHO	=	echo -e
