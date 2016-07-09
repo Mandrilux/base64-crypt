@@ -5,21 +5,23 @@
 ** Login   <baptiste@epitech.net>
 **
 ** Started on  Sat Jul  9 15:26:23 2016
-** Last update Sat Jul  9 19:20:42 2016 
+** Last update Sat Jul  9 19:23:54 2016 
 */
 
 #include "data.h"
 
 int	main(int ac, char **argv)
 {
-  if (ac == 1)
+  char	*str_bin = NULL;
+  if (ac != 2)
     return (return_error("Usage : [str]", EXIT_FAILURE));
   printf("[START] string = %s\n", argv[1]);
-  str_to_bin(argv[1]);
+  if ((str_bin = str_to_bin(argv[1])) == NULL)
+    return (return_error("[-] ERROR MEMORY", EXIT_FAILURE));
   return (EXIT_SUCCESS);
 }
 
-int    str_to_bin(char *str)
+char    *str_to_bin(char *str)
 {
   int	i = 7;
   int	k = -1;
@@ -28,7 +30,7 @@ int    str_to_bin(char *str)
 
   str_bin = calloc(strlen(str) * 8 + 1, sizeof(char));
   if (str_bin == NULL)
-    return (-1);
+    return (NULL);
   while (str[++k] != '\0')
     {
       while (i >= 0)
@@ -42,6 +44,5 @@ int    str_to_bin(char *str)
 	}
       i = 7;
     }
-  printf("%s\n", str_bin);
-  return (1);
+  return (str_bin);
 }
