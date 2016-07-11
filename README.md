@@ -6,10 +6,11 @@ for use , you must compile in LINUX / UNIX distribution
 
 1) make re
 
-2)
 
-exemple for launch:
+Exemple for launch:
 
 user $ ./base64 "this sentence is encoded"
 
 result = dGhpcyBzZW50ZW5jZSBpcyBlbmNvZGVk====
+
+for more information you can contact me : baptiste.heraud@epitech.eu
