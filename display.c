@@ -6,6 +6,8 @@ int	display_code(int *tab, int len)
   int	add_equal = 4 - (len % 4);
   int	i = -1;
 
+  if (add_equal == 4)
+    add_equal = 0;
   if (code == NULL)
     return (-1);
   while (++i < len)
