@@ -9,17 +9,17 @@ int	main(int ac, char **argv)
   if (ac != 2)
     return (return_error("Usage : [str_to_crypt_to_base64]", EXIT_FAILURE));
   if ((str_bin = str_to_bin(argv[1])) == NULL)
-    return (return_error("[-] ERROR MEMORY", EXIT_FAILURE));
+    return return_error("[-] ERROR MEMORY", EXIT_FAILURE);
   /* printf("Step 1 : %s\n", str_bin); */
   if ((str_bin = adjust(str_bin)) == NULL)
-    return (return_error("[-] ERROR MEMORY", EXIT_FAILURE));
+    return return_error("[-] ERROR MEMORY", EXIT_FAILURE);
   /* printf("Step 2 : %s\n", str_bin); */
   if ((tab_letter = bin_to_int(str_bin, &len_tab)) == NULL)
-    return (return_error("[-] ERROR MEMORY", EXIT_FAILURE));
+    return return_error("[-] ERROR MEMORY", EXIT_FAILURE);
   free(str_bin);
   if (display_code(tab_letter, len_tab) == -1)
-    return (return_error("[-] ERROR MEMORY", EXIT_FAILURE));
-  return (EXIT_SUCCESS);
+    return return_error("[-] ERROR MEMORY", EXIT_FAILURE);
+  return EXIT_SUCCESS;
 }
 
 char	*adjust(char *str)
@@ -42,7 +42,7 @@ char	*adjust(char *str)
       add--;
     }
   tmp[start] = '\0';
-  return (tmp);
+  return tmp;
 }
 
 char    *str_to_bin(char *str)
@@ -69,7 +69,7 @@ char    *str_to_bin(char *str)
 
       i = 7;
     }
-  return (str_bin);
+  return str_bin;
 }
 
 int	*bin_to_int(char *str, int *len_tab)
@@ -96,5 +96,5 @@ int	*bin_to_int(char *str, int *len_tab)
 	  tmp_add = 0;
 	}
     }
-  return (tab_letter);
+  return tab_letter;
 }
