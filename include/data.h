@@ -7,14 +7,11 @@
 #include <string.h>
 #include <math.h>
 
-		/* error.c */
-
-int		 return_error(char *error, int flag);
-
 		/* display.c */
 
-int		 display_code(int *tab, int len);
+void		 display_code(int *tab, int len);
 void		 display_tab(int *tab, int len);
+int		 return_error(char *error, int flag);
 
 		/* main.c */
 

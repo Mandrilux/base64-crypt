@@ -10,15 +10,14 @@ int	main(int ac, char **argv)
     return (return_error("Usage : [str_to_crypt_to_base64]", EXIT_FAILURE));
   if ((str_bin = str_to_bin(argv[1])) == NULL)
     return return_error("[-] ERROR MEMORY", EXIT_FAILURE);
-  /* printf("Step 1 : %s\n", str_bin); */
+  printf("Step 1 : %s\n", str_bin);
   if ((str_bin = adjust(str_bin)) == NULL)
     return return_error("[-] ERROR MEMORY", EXIT_FAILURE);
-  /* printf("Step 2 : %s\n", str_bin); */
+  printf("Step 2 : %s\n", str_bin);
   if ((tab_letter = bin_to_int(str_bin, &len_tab)) == NULL)
     return return_error("[-] ERROR MEMORY", EXIT_FAILURE);
   free(str_bin);
-  if (display_code(tab_letter, len_tab) == -1)
-    return return_error("[-] ERROR MEMORY", EXIT_FAILURE);
+  display_code(tab_letter, len_tab);
   return EXIT_SUCCESS;
 }
 
