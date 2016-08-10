@@ -9,16 +9,14 @@ int	display_code(int *tab, int len)
   if (add_equal == 4)
     add_equal = 0;
   if (code == NULL)
-    return (-1);
+    return -1;
   while (++i < len)
-    {
       printf("%c", code[tab[i]]);
-    }
   while (add_equal-- > 0)
     printf("=");
   printf("\n");
   free(tab);
-  return (1);
+  return 1;
 }
 
 void    display_tab(int *tab, int len)
@@ -28,4 +26,10 @@ void    display_tab(int *tab, int len)
   while(++i < len)
       printf("%d ", tab[i]);
   printf("\n");
+}
+
+int     return_error(char *error, int flag)
+{
+  printf("%s\n", error);
+  return flag;
 }

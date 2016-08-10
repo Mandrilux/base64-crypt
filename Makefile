@@ -1,7 +1,6 @@
 NAME	=	base64
 
 SRC	=	main.c \
-		error.c \
 		display.c
 
 INC_DIR	=	include

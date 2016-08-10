@@ -7,7 +7,7 @@ int	main(int ac, char **argv)
   int	len_tab = 0;
 
   if (ac != 2)
-    return (return_error("Usage : [str]", EXIT_FAILURE));
+    return (return_error("Usage : [str_to_crypt_to_base64]", EXIT_FAILURE));
   if ((str_bin = str_to_bin(argv[1])) == NULL)
     return (return_error("[-] ERROR MEMORY", EXIT_FAILURE));
   /* printf("Step 1 : %s\n", str_bin); */
