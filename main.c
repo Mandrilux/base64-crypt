@@ -34,12 +34,8 @@ char	*adjust(char *str)
   start = strlen(str);
   if ((tmp = realloc(str,sizeof(char) * (strlen(str) + 1 + add))) == NULL)
     return (NULL);
-  while (add > 0)
-    {
-      tmp[start] = '0';
-      start++;
-      add--;
-    }
+  while (add-- > 0)
+    tmp[start++] = '0';
   tmp[start] = '\0';
   return tmp;
 }
@@ -86,8 +82,7 @@ int	*bin_to_int(char *str, int *len_tab)
     {
       if (str[i] == '1')
 	tmp_add += pow(2.0, (double)flag);
-      flag--;
-      if (flag == -1)
+      if (--flag == -1)
 	{
 	  tab_letter[indice] = tmp_add;
 	  indice++;
